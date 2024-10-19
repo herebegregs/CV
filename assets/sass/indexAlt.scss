@@ -1,0 +1,205 @@
+$pink: #FF71CE;
+$purple: #B967FF;
+$blue: #01CDFE;
+$green: #05FFA1;
+$yellow: #FFFB96;
+html {
+    font-family: 'Exo 2', sans-serif;
+    // color: #fff;
+    h1, h2, h3, h4, h5, p, li, span {
+        padding: 0;
+        margin: 0;
+    }
+    h1, h2, h3, h4, h5 {
+        margin-bottom: 10px;
+    }
+    p, a {
+        line-height: 1.7;
+    }
+    a {
+        display: block;
+    }
+    ul {
+        margin: 0;
+        &.blank {
+            padding: 0;
+            list-style: none;
+        }
+    }    
+    body {
+        padding: 0 20px;
+        margin: 0;
+        background-size: cover;
+    }
+    .bg-container {
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .wrapper {
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        // grid-template-columns: repeat(6, 1fr);
+        // grid-auto-rows: 300px;
+        gap: 0px 20px;
+        grid-auto-flow: row;
+        &:after {
+            content:"";
+            position: fixed;
+            width:100vw;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+          }
+    }
+    .sidebar { 
+        display: flex;
+        flex-direction: column;
+        .block {
+            height: 100%;
+        }
+    }
+    
+          .content {
+            grid-column: 2 / span 5;
+          }
+    .block {
+        margin: 20px auto;
+        border: 3px solid #cecece;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: -3px 3px 0 #cecece;
+        .block-inner {
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            padding: 20px;
+        }
+    }
+    .personal-info {
+        // border-color: $pink;
+        border-width: 3px;
+        position: relative;
+        .portrait {
+            width:150px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: -3px 3px 0 #cecece;
+            // box-shadow: -3px 3px 0 rgba($color: $pink, $alpha: 1);
+            border: 2px solid #cecece;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .skills-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 10px;
+            li {
+                padding: 10px 15px;
+                border: 2px solid #cecece;
+                border-radius: 5px;
+            }
+        }
+        .interests-list {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 20px 10px;
+            li {
+                flex-basis: calc(50% - 40px);
+                white-space: nowrap;
+            }
+        }
+        .details-block {
+            margin-bottom: 40px;
+            width: 100%;
+            position: relative;
+            &:after {
+                content: '';
+                width: 90%;
+                position: relative;
+                bottom: -20px;
+                height: 2px;
+                background: #cecece;
+                display: block;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .intro {
+        // box-shadow: -3px 3px 0 rgba($color: $green, $alpha: 1);
+        // border-color: $yellow;
+        position: relative;
+    }
+    .experience {
+        // box-shadow: -3px 3px 0 rgba($color: $purple, $alpha: 1);
+        // border-color: $blue;
+        position: relative;
+        .workplace {
+            width: 100%;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            .work-title {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #cfcfcf;
+                    position: absolute;
+                    bottom: 5px;
+                }
+            }
+            .position {
+                // width: 100
+                font-weight: bold;
+            }
+            .breakdown {
+                list-style:square ;
+                line-height: 1.6;
+            }
+        }
+    }
+    .education {
+        // box-shadow: -3px 3px 0 rgba($color: $yellow, $alpha: 1);
+        // border-color: $green;
+        position: relative;
+        .result {
+            width: 100%;
+            .education-title {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #cfcfcf;
+                    position: absolute;
+                    bottom: 5px;
+                }
+            }
+        }
+    }
+}
