@@ -18,6 +18,10 @@ html {
     }
     a {
         display: block;
+        color: blue;
+        &:visited {
+            color: blue;
+        }
     }
     ul {
         margin: 0;
